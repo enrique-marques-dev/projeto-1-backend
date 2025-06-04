@@ -1,8 +1,11 @@
-const Loja = require("./models/loja");
+const http = require("http");
+const lojaRoutes = require("./routes/lojaRoutes");
 
-async function testarInsercao() {
-  const loja = new Loja("Cidade Canção", "55.555.555/0001-55", "cidadecancao@gmail.com", "(43) 99189-5220");
-  await loja.inserir();
-}
+const server = http.createServer((req, res) => {
+  res.setHeader("Content-Type", "application/json");
+  lojaRoutes(req, res);
+});
 
-testarInsercao();
+server.listen(3000, () => {
+  console.log("Servidor rodando em http://localhost:3000");
+});
