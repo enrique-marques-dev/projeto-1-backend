@@ -16,31 +16,25 @@ async function usuarioRoutes(req, res) {
   if (urlParts[1] === "usuarios") {
     const id = urlParts[2];
 
-    // POST /usuarios/login
     if (method === "POST" && id === "login") {
       const body = await parseBody(req);
       return loginUsuario(req, res, body);
     }
 
-    // GET /usuarios
     if (method === "GET" && !id) return listarUsuarios(res);
 
-    // GET /usuarios/:id
     if (method === "GET" && id) return buscarUsuarioPorId(res, id);
 
-    // POST /usuarios
     if (method === "POST") {
       const body = await parseBody(req);
       return criarUsuario(req, res, body);
     }
 
-    // PUT /usuarios/:id
     if (method === "PUT" && id) {
       const body = await parseBody(req);
       return atualizarUsuario(req, res, id, body);
     }
 
-    // DELETE /usuarios/:id
     if (method === "DELETE" && id) {
       return deletarUsuario(res, id);
     }
