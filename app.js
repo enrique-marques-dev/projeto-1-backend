@@ -1,6 +1,7 @@
 const http = require("http");
 const lojaRoutes = require("./routes/lojaRoutes");
 const usuarioRoutes = require("./routes/usuarioRoutes");
+const produtoRoutes = require("./routes/produtoRoutes");
 
 const server = http.createServer((req, res) => {
   res.setHeader("Content-Type", "application/json");
@@ -11,6 +12,10 @@ const server = http.createServer((req, res) => {
 
   if (req.url.startsWith("/usuarios")) {
     return usuarioRoutes(req, res);
+  }
+
+  if (req.url.startsWith("/produtos")) {
+    return produtoRoutes(req, res);
   }
 
   res.writeHead(404);
