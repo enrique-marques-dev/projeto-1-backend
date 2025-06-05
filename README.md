@@ -12,9 +12,16 @@ Projeto desenvolvido como parte da disciplina **Programação Web Back-End**.
 
 ## ✅ Funcionalidades Implementadas
 
-- 📦 **Cadastro de Produtos**: inserção de novos produtos no banco de dados.
-- 🔍 **Busca de Produtos**: recuperação de produtos pelo ID ou por categoria.
-- ❌ **Deleção de Produtos**: remoção de produtos cadastrados.
+- 📦 **Cadastro de Produtos**
+- 😃 **Cadastro de Usuários**
+- 🛒 **Cadastro de Lojas**
+- 📝 **Autenticação de Usuário**
+- 🔍 **Busca de Produtos**
+- 🔍 **Busca de Usuários**
+- 🔍 **Busca de Lojas**
+- ❌ **Deleção de Produtos**
+- ❌ **Deleção de Usuários**
+- ❌ **Deleção de Lojas**
 - ⚠️ **Tratamento de Exceções**: captura e tratamento de erros.
 - 📝 **Armazenamento de Logs**: registro automático de exceções no arquivo `error.log`.
 
